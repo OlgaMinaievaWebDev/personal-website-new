@@ -1,7 +1,9 @@
+import Hero from "./pages/Hero";
+
 function App() {
   return (
     <>
-      <h1 className="text-7xl font-bold underline">Hello world!</h1>
+      <Hero />
     </>
   );
 }
