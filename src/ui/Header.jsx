@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <header className="flex justify-between items-center p-5">
+    <header className="flex justify-between items-center p-5 bg-background">
       <h1>
         <NavLink to="/">Olga</NavLink>
       </h1>
