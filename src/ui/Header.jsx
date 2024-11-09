@@ -1,16 +1,20 @@
 import { NavLink } from "react-router-dom";
+import Logo from "/public/Olga-Logo.webp";
 
 function Header() {
   return (
-    <header className="flex justify-between items-center p-5 bg-background">
-      <h1>
-        <NavLink to="/">Olga</NavLink>
+    <header className="flex justify-between items-center p-5 bg-background text-textPrimary">
+      <h1 className="text-2xl font-bold mb-2 hover:text-highlight">
+        <NavLink to="/">
+          <img src={Logo} alt="" className="h-16 mb-2" />
+        </NavLink>
       </h1>
-      <nav className="flex space-x-4">
+
+      <nav className="flex space-x-6">
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "text-orange-500 underline" : "hover:underline"
+            isActive ? "text-highlight underline" : "hover:text-accent"
           }
         >
           Home
@@ -18,7 +22,7 @@ function Header() {
         <NavLink
           to="/about"
           className={({ isActive }) =>
-            isActive ? "text-orange-500 underline" : "hover:underline"
+            isActive ? "text-highlight underline" : "hover:text-accent"
           }
         >
           About
@@ -26,7 +30,7 @@ function Header() {
         <NavLink
           to="/projects"
           className={({ isActive }) =>
-            isActive ? "text-orange-500 underline" : "hover:underline"
+            isActive ? "text-highlight underline" : "hover:text-accent"
           }
         >
           Projects
@@ -34,7 +38,7 @@ function Header() {
         <NavLink
           to="/skills"
           className={({ isActive }) =>
-            isActive ? "text-orange-500 underline" : "hover:underline"
+            isActive ? "text-highlight underline" : "hover:text-accent"
           }
         >
           Skills
@@ -42,7 +46,7 @@ function Header() {
         <NavLink
           to="/contact"
           className={({ isActive }) =>
-            isActive ? "text-orange-500 underline" : "hover:underline"
+            isActive ? "text-highlight underline" : "hover:text-accent"
           }
         >
           Contact
