@@ -4,12 +4,14 @@ import Footer from "./Footer";
 
 function AppLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Header />
-      <main className="flex-grow p-5 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+    <div className="flex flex-col min-h-screen bg-background text-textPrimary">
+      <Header className="h-16" /> {/* Fixed header height */}
+      <main className="flex-grow flex items-center justify-center">
+        {" "}
+        {/* Hero fills the remaining space */}
         <Outlet />
       </main>
-      <Footer />
+      <Footer className="h-16" /> {/* Fixed footer height */}
     </div>
   );
 }
