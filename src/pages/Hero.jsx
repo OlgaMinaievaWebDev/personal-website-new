@@ -2,9 +2,11 @@ import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center text-center">
+    <section className="flex flex-col items-center justify-center text-center ">
       <div className="text-center">
-        <h1 className="text-5xl font-bold mb-4">Hello, I’m Olga Minaieva</h1>
+        <h1 className="text-5xl font-bold mb-4 animate-fade-in">
+          Hello, I’m <span className="text-highlight">Olga Minaieva</span>
+        </h1>
         <p className="text-lg mb-6 max-w-lg mx-auto">
           A passionate web developer specializing in building responsive and
           user-friendly web applications.
