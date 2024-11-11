@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center text-center ">
+    <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-b from-background-light to-background-dark animate-fade-in-up">
       <div className="text-center">
         <h1 className="text-5xl font-bold mb-4 animate-fade-in">
           Hello, I’m <span className="text-highlight">Olga Minaieva</span>
