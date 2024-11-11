@@ -11,3 +11,23 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Custom colors for accents */
+.text-highlight {
+  color: #db2777; /* Pink highlight color */
+}
