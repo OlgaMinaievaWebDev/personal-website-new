@@ -1,3 +1,5 @@
+import ProfilePhoto from "../../public/IMG_4839.jpg";
+
 function About() {
   return (
     <section className="py-16 bg-gradient-to-b from-background-light to-background-dark text-gray-100">
@@ -9,9 +11,9 @@ function About() {
           {/* Profile Image */}
           <div className="lg:w-1/3 flex justify-center">
             <img
-              src="/path/to/profile-pic.jpg"
+              src={ProfilePhoto}
               alt="Profile"
-              className="rounded-full w-40 h-40 lg:w-48 lg:h-48 shadow-lg border-4 border-highlight"
+              className="rounded-full w-40 h-40 lg:w-48 lg:h-48 shadow-lg border-4 border-highlight object-cover"
             />
           </div>
 
