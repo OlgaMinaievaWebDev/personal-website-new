@@ -6,7 +6,7 @@ function AppLayout() {
   return (
     <div className="flex flex-col min-h-screen bg-background text-textPrimary">
       <Header className="h-16" /> {/* Fixed header height */}
-      <main className="flex-grow flex items-center justify-center">
+      <main className="flex-grow flex items-center justify-center pt-16">
         {" "}
         {/* Hero fills the remaining space */}
         <Outlet />
