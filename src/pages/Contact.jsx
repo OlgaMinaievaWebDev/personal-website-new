@@ -4,7 +4,7 @@ import emailjs from "emailjs-com";
 function Contact() {
   const SERVICE_ID = "service_b8ppitk"; // Replace with your actual service ID
   const TEMPLATE_ID = "template_nlev23y"; // Replace with your actual template ID
-  const PUBLIC_KEY = "pCP2UHaXJ8C27TCnE";
+  const PUBLIC_KEY = "N5ysrR3l2yCF-xJSnX2ub";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -12,24 +12,33 @@ function Contact() {
     message: "",
   });
 
-  const [successMessage, setSuccessMessage] = useState(""); // Corrected typo
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSuccessMessage("");
+    setErrorMessage("");
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
       .then(() => {
         setSuccessMessage("Thank you! Your message has been sent.");
-        setFormData({ name: "", email: "", message: "" });
+        e.target.reset(); // Reset the form fields
+        setFormData({ name: "", email: "", message: "" }); // Clear form data state
       })
       .catch((error) => {
-        console.error("Error sending message", error);
+        console.error("Error sending message:", error);
+        setErrorMessage("Oops! Something went wrong. Please try again.");
       });
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
@@ -45,6 +54,9 @@ function Contact() {
 
         {successMessage && (
           <p className="text-center mb-6 text-green-500">{successMessage}</p>
+        )}
+        {errorMessage && (
+          <p className="text-center mb-6 text-red-500">{errorMessage}</p>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
