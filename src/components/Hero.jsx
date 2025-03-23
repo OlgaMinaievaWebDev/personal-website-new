@@ -1,33 +1,18 @@
-
-
+import Button from "../ui/Button";
 function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-b from-background-light to-background-dark animate-fade-in-up">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold mb-4 animate-fade-in">
-          Hello, I’m <span className="text-highlight">Olga Minaieva</span>
-        </h1>
-        <p className="text-lg mb-6 max-w-lg mx-auto">
-          A passionate web developer specializing in building responsive and
-          user-friendly web applications.
-        </p>
-        <div className="flex justify-center space-x-4">
-          <a
-            to="/projects"
-            className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
-          >
-            View Projects
-          </a>
-          <a
-            to="/contact"
-            className="px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50"
-          >
-            Contact Me
-          </a>
-        </div>
-      </div>
+    <section
+      id="hero"
+      className="flex flex-col justify-center items-start w-full p-24 space-y-8 h-[100vh] bg-gradient-to-r from-[#FF6F00] to-[#FF9100] text-white"
+    >
+      <h1 className="text-5xl font-semibold leading-tight tracking-wide">
+        Olga Minaieva
+      </h1>
+      <h3 className="text-xl font-light text-gray-200">
+        A Front-End Developer based in Toronto, CA
+      </h3>
+      <Button>Get in touch</Button>
     </section>
   );
 }
-
-export default Hero;
+export default Hero

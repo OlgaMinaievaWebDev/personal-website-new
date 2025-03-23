@@ -1,49 +1,47 @@
 import ProfilePhoto from "../../public/IMG_4839.jpg";
+import Button from "../ui/Button";
 
 function About() {
   return (
-    <section id="about" className="py-16 bg-gradient-to-b from-background-light to-background-dark text-gray-100">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6 text-highlight animate-fade-in">
-          About Me
-        </h2>
-        <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-8 space-y-6 lg:space-y-0 animate-slide-in">
-          {/* Profile Image */}
-          <div className="lg:w-1/3 flex justify-center">
+    <section
+      id="about"
+      className="flex flex-col justify-center items-start w-full p-24 bg-gradient-to-r from-[#FF6F00] to-[#FF9100] text-white space-y-8"
+    >
+      <div>
+        <h2 className="text-4xl text-white inline-block">About Me</h2>
+        <div className="h-1 w-[60px] bg-white"></div>
+
+        <div className="flex items-start space-x-8 space-y-0 mt-8 gap-10">
+          <div className="lg:w-1/3 flex justify-start mb-6 lg:mb-0">
             <img
               src={ProfilePhoto}
               alt="Profile"
-              className="rounded-full w-40 h-40 lg:w-48 lg:h-48 shadow-lg border-4 border-highlight object-cover"
+              className="w-64 h-64 shadow-2xl object-cover"
             />
           </div>
 
           {/* Description */}
           <div className="lg:w-2/3 text-center lg:text-left">
-            <p className="text-lg leading-relaxed mb-4">
-              I’m a self-taught web developer passionate about creating{" "}
-              <span className="text-accent font-semibold">
-                user-centered applications
-              </span>
-              . With skills in JavaScript, HTML, CSS, Tailwind, and React, I’m
-              constantly learning and improving by building projects that bring
-              ideas to life.
+            <p className="text-xl leading-relaxed mb-6">
+              I'm a web developer based out of Orillia, CA. I love building apps
+              that solve real-world problems, and that are delightful to use. My
+              specialities include TypeScript, React JS, Tailwind CSS, and
+              JavaScript.
             </p>
-            <p className="text-lg leading-relaxed mb-4">
-              Pivoting into tech has opened up a future where I can pursue a
-              career with purpose—developing applications that genuinely make a
-              difference in people’s lives. I’m driven by the vision of crafting{" "}
-              <span className="text-accent font-semibold">
-                tools that bring value
-              </span>
-              , and I look forward to growing in this field to turn that vision
-              into reality.
+            <p className="text-xl leading-relaxed mb-6">
+              With a background in management and guest services at a casino,
+              I’ve honed strong communication and problem-solving skills,
+              ensuring an exceptional experience for clients and a
+              high-performing team.
             </p>
-            <p className="text-lg leading-relaxed">
+            <p className="text-xl leading-relaxed mb-6">
               Outside of coding, I enjoy an active lifestyle—whether it’s
               working out at the gym, exploring the outdoors, or playing the
               ukulele. I love meeting new people and creating memorable
               experiences along the way!
             </p>
+
+       <Button>Download CV</Button>
           </div>
         </div>
       </div>
