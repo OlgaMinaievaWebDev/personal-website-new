@@ -2,7 +2,7 @@ import ProfilePhoto from "../../public/IMG_4839.jpg";
 
 function About() {
   return (
-    <section className="py-16 bg-gradient-to-b from-background-light to-background-dark text-gray-100">
+    <section id="about" className="py-16 bg-gradient-to-b from-background-light to-background-dark text-gray-100">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-6 text-highlight animate-fade-in">
           About Me
