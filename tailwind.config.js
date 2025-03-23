@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        lato: ["Lato", "sans-serif"],
+        jost: ["Jost", "sans-serif"],
       },
       colors: {
         background: "#1E293B", //slate Gray

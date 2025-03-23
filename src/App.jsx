@@ -7,14 +7,14 @@ import Header from './components/Header'
 
 function App() {
   return (
-    <>
+    <div>
       <Header/>
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contact />
-    </>
+    </div>
   );
 }
 
