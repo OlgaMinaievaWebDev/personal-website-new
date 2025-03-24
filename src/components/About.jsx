@@ -29,8 +29,7 @@ function About() {
               JavaScript.
             </p>
             <p className="text-xl leading-relaxed mb-6">
-              With a background in management and guest services at a casino,
-              I’ve honed strong communication and problem-solving skills,
+              With a background in management and guest services at a casino industry, I’ve honed strong communication and problem-solving skills,
               ensuring an exceptional experience for clients and a
               high-performing team.
             </p>
