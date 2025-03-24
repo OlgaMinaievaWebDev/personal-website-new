@@ -38,7 +38,7 @@ function Card() {
   ];
 
   return (
-    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6 items-stretch">
+    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 w-full">
       {WORK_DATA.map((item) => (
         <CardItem key={item.id} project={item} />
       ))}
