@@ -5,18 +5,18 @@ function About() {
   return (
     <section
       id="about"
-      className="flex flex-col justify-center items-start w-full p-24 bg-gradient-to-r from-[#FF6F00] to-[#FF9100] text-white space-y-8"
+      className="flex flex-col justify-center items-start w-full p-8 md:p-16 lg:p-24 bg-gradient-to-r from-[#FF6F00] to-[#FF9100] text-white space-y-8"
     >
       <div>
         <h2 className="text-4xl text-white inline-block">About Me</h2>
         <div className="h-1 w-[60px] bg-white"></div>
 
-        <div className="flex items-start space-x-8 space-y-0 mt-8 gap-10">
-          <div className="lg:w-1/3 flex justify-start mb-6 lg:mb-0">
+        <div className="flex flex-col lg:flex-row items-start lg:space-x-8 space-y-8 lg:space-y-0 mt-8 gap-10">
+          <div className="w-full lg:w-1/3 flex justify-center lg:justify-start">
             <img
               src={ProfilePhoto}
               alt="Profile"
-              className="w-64 h-64 shadow-2xl object-cover"
+              className="w-3/4 sm:w-64 h-64 shadow-2xl object-cover"
             />
           </div>
 
@@ -41,7 +41,7 @@ function About() {
               experiences along the way!
             </p>
 
-       <Button>Download CV</Button>
+            <Button>Download CV</Button>
           </div>
         </div>
       </div>
