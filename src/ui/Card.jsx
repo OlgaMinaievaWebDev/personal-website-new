@@ -1,7 +1,7 @@
 import CardItem from "./CardItem";
-import hikeImg from "../../public/Hike.png";
-import portfolioImg from "../../public/Portfolio.png";
-import barbershopImg from "../../public/Barbershop.png";
+import hikeImg from "/Hike.png";
+import portfolioImg from "/Portfolio.png";
+import barbershopImg from "/Barbershop.png";
 
 function Card() {
   const WORK_DATA = [
@@ -11,7 +11,8 @@ function Card() {
       img: hikeImg,
       location: "https://pack-for-hike.vercel.app/",
       github: "https://github.com/OlgaMinaievaWebDev/pack-for-hike",
-      description: "",
+      description:
+        "Pack for Hike helps outdoor enthusiasts create custom packing lists for hiking trips. Users can add, delete and filter their gears. Built with React for a lightweight, responsive experience.",
       technologies: "React, HTML, CSS",
     },
     {
@@ -20,7 +21,8 @@ function Card() {
       img: portfolioImg,
       location: "https://olga-minaieva-personal-website.vercel.app/",
       github: "https://github.com/OlgaMinaievaWebDev/personal-website-new",
-      description: "",
+      description:
+        "My portfolio showcases my skills as a Front-End Developer, featuring interactive project displays and a modern, responsive design. Built with React and TailwindCSS, it reflects my expertise in creating clean, user-friendly websites.",
       technologies: "React + Vite, HTML, TailwindCSS",
     },
     {
@@ -29,7 +31,8 @@ function Card() {
       img: barbershopImg,
       location: "https://barbershop-six-flax.vercel.app/",
       github: "https://github.com/OlgaMinaievaWebDev/barbershop",
-      description: "",
+      description:
+        "A booking platform for barbershops where customers can browse barbers, select services, and book appointments online. Built with React and Vite for a fast, responsive experience on both desktop and mobile.",
       technologies: "React + Vite, HTML, TailwindCSS",
     },
   ];
