@@ -1,115 +1,47 @@
-import { useState } from "react";
-import emailjs from "emailjs-com";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Contact() {
-  const SERVICE_ID = "service_b8ppitk"; // Replace with your actual service ID
-  const TEMPLATE_ID = "template_nlev23y"; // Replace with your actual template ID
-  const PUBLIC_KEY = "N5ysrR3l2yCF-xJSnX2ub";
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSuccessMessage("");
-    setErrorMessage("");
-
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
-      .then(() => {
-        setSuccessMessage("Thank you! Your message has been sent.");
-        e.target.reset(); // Reset the form fields
-        setFormData({ name: "", email: "", message: "" }); // Clear form data state
-      })
-      .catch((error) => {
-        console.error("Error sending message:", error);
-        setErrorMessage("Oops! Something went wrong. Please try again.");
-      });
-  };
-
   return (
-    <section className="py-16 bg-gradient-to-b from-background-light to-background-dark text-gray-100">
-      <div className="max-w-3xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-6 text-highlight text-center">
-          Contact Me
-        </h2>
-        <p className="text-center mb-8">
-          Have a question or want to work together? Fill out the form below to
-          get in touch!
-        </p>
+    <section
+      id="contact"
+      className="flex flex-col justify-center items-start w-full p-24 bg-gradient-to-r from-[#FF6F00] to-[#FF9100] text-white space-y-8"
+    >
+      <h2 className="text-4xl text-white inline-block">Get in Touch</h2>
+      <div className="h-1 w-[60px] bg-white mb-6"></div>
 
-        {successMessage && (
-          <p className="text-center mb-6 text-green-500">{successMessage}</p>
-        )}
-        {errorMessage && (
-          <p className="text-center mb-6 text-red-500">{errorMessage}</p>
-        )}
+      <p className="text-lg mb-6">
+        I'm always open to new opportunities and collaborations! Whether you
+        have a question, want to work together, or just want to say hi, feel
+        free to drop me a message.
+      </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium mb-1">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium mb-1">
-              Message
-            </label>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows="5"
-              className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-700"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-lg"
-          >
-            Send Message
-          </button>
-        </form>
+      <div className="flex gap-6 mb-6">
+        <a
+          a
+          href="mailto:minaeva9@gmail.com?subject=Hello%20Olga&body=I%20would%20like%20to%20connect%20with%20you..."
+          className="text-white hover:text-orange-300 transition"
+        >
+          <FaEnvelope size={24} />
+        </a>
+        <a
+          href="https://github.com/OlgaMinaievaWebDev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-orange-300 transition"
+        >
+          <FaGithub size={24} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/olga-minaieva-370279154/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:text-orange-300 transition"
+        >
+          <FaLinkedin size={24} />
+        </a>
       </div>
+
+      {/* You could add a contact form or a resume button here if you'd like */}
     </section>
   );
 }

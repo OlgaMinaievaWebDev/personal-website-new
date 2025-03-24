@@ -2,7 +2,7 @@ function CardItem({ project }) {
   const { title, description, location, github, technologies, img } = project;
 
   return (
-    <li className="bg-gradient-to-br from-[#262626] to-[#1A1A1A] border border-[#333] rounded-2xl p-6 mb-6 flex justify-between items-center gap-6 shadow-md hover:shadow-lg transition-shadow">
+    <li className="bg-gradient-to-br from-[#262626] to-[#1A1A1A] border border-[#333]  rounded-2xl p-6 mb-6 flex justify-between items-center gap-6 shadow-md hover:shadow-lg transition-shadow ">
    
       <div className="flex flex-col space-y-3 max-w-[70%]">
         <h3 className="text-2xl font-bold text-white">{title}</h3>

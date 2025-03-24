@@ -11,7 +11,9 @@ function Hero() {
       <h3 className="text-xl font-light text-gray-200">
         A Front-End Developer based in Toronto, CA
       </h3>
-      <Button>Get in touch</Button>
+      <a href="mailto:minaeva9@gmail.com?subject=Hello%20Olga&body=I%20would%20like%20to%20connect%20with%20you...">
+        <Button>Get in Touch</Button>
+      </a>
     </section>
   );
 }
