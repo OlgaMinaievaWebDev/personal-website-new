@@ -8,7 +8,28 @@ function CardItem({ project }) {
         <h3 className="text-2xl font-bold text-white">{title}</h3>
         <p className="text-sm text-gray-400 flex-grow">{description}</p>
         <p className="text-sm text-gray-500">Technologies: {technologies}</p>
-        <div className="flex gap-4 mt-3">{/* Links remain unchanged */}</div>
+        <div className="flex gap-4 mt-3">
+          {location && (
+            <a
+              href={location}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-300 underline transition-colors duration-200 hover:text-orange-500"
+            >
+              Live Site
+            </a>
+          )}
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-orange-300 underline transition-colors duration-200 hover:text-orange-500"
+            >
+              GitHub
+            </a>
+          )}
+        </div>
       </div>
 
       {/* Image Container */}
