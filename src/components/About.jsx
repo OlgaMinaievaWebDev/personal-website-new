@@ -23,9 +23,9 @@ function About() {
           {/* Description */}
           <div className="lg:w-2/3 text-center lg:text-left">
             <p className="text-xl leading-relaxed mb-6">
-              I'm a web developer based out of Orillia, CA. I love building apps
+              I'm a web developer based out of Toronto, Ca. I love building apps
               that solve real-world problems, and that are delightful to use. My
-              specialities include TypeScript, React JS, Tailwind CSS, and
+              specialities include React JS, Tailwind CSS, and
               JavaScript.
             </p>
             <p className="text-xl leading-relaxed mb-6">
