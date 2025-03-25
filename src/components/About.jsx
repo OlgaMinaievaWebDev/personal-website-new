@@ -25,12 +25,12 @@ function About() {
             <p className="text-xl leading-relaxed mb-6">
               I'm a web developer based out of Toronto, CA. I love building apps
               that solve real-world problems, and that are delightful to use. My
-              specialities include React JS, Tailwind CSS, and
-              JavaScript.
+              specialities include React JS, Tailwind CSS, and JavaScript.
             </p>
             <p className="text-xl leading-relaxed mb-6">
-              With a background in management and guest services at a casino industry, I’ve honed strong communication and problem-solving skills,
-              ensuring an exceptional experience for clients and a
+              With a background in management and guest services at a casino
+              industry, I’ve honed strong communication and problem-solving
+              skills, ensuring an exceptional experience for clients and a
               high-performing team.
             </p>
             <p className="text-xl leading-relaxed mb-6">
@@ -40,7 +40,9 @@ function About() {
               experiences along the way!
             </p>
 
-            <Button>Download CV</Button>
+            <a href="/O_Minaieva_CV.pdf" download="O_Minaieva_CV.pdf">
+              <Button>Download CV</Button>
+            </a>
           </div>
         </div>
       </div>
