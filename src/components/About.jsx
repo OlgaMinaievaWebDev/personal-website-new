@@ -42,7 +42,7 @@ function About() {
 
             <a
               href="/Olga_Minaieva_Frontend_CV.pdf"
-              download="Olga_Minaieva_Frontend_CV.pdf"
+              download="/Olga_Minaieva_Frontend_CV.pdf"
             >
               <Button>Download CV</Button>
             </a>
