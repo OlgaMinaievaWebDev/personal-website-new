@@ -40,7 +40,7 @@ function About() {
               experiences along the way!
             </p>
 
-            <a href="/O_Minaieva_CV.pdf" download="O_Minaieva_CV.pdf">
+            <a href="/O_Minaieva_Frontend_CV.pdf" download="O_Minaieva_Frontend_CV.pdf">
               <Button>Download CV</Button>
             </a>
           </div>
