@@ -1,20 +1,9 @@
 import CardItem from "./CardItem";
-import hikeImg from "/Hike.png";
-import portfolioImg from "/Portfolio.png";
-import barbershopImg from "/Barbershop.png";
+import portfolioImg from "/Portfolio.webp";
+import barbershopImg from "/Barbershop.webp";
 
 function Card() {
   const WORK_DATA = [
-    {
-      id: 1,
-      title: "Pack for Hike",
-      img: hikeImg,
-      location: "https://pack-for-hike.vercel.app/",
-      github: "https://github.com/OlgaMinaievaWebDev/pack-for-hike",
-      description:
-        "Pack for Hike helps outdoor enthusiasts create custom packing lists for hiking trips. Users can add, delete and filter their gears. Built with React for a lightweight, responsive experience.",
-      technologies: "React, HTML, CSS",
-    },
     {
       id: 2,
       title: "Portfolio Website",
