@@ -7,11 +7,17 @@ export default {
         jost: ["Jost", "sans-serif"],
       },
       colors: {
-        background: "#1E293B", //slate Gray
-        textPrimary: "#F5F5F5", // Off-White
-        accent: "#14B8A6", // Teal
-        accentSecondary: "#64748B", // Steel Blue
-        highlight: "#FFD700", // Gold
+        "brand-orange": "#C2410C",
+        "brand-orange-dark": "#9A3412",
+        "brand-orange-light": "#FB923C",
+        "brand-orange-soft": "#FDBA74",
+        "brand-peach": "#FED7AA",
+        "brand-cream": "#FFF7ED",
+        "brand-charcoal": "#111827",
+        "card-surface": "#1F2937",
+        "card-border": "#374151",
+        "hero-start": "#FF6F00",
+        "hero-end": "#FF9100",
       },
     },
   },

@@ -1,10 +1,37 @@
-function Button({ children }) {
+import PropTypes from "prop-types";
+
+const baseStyles =
+  "inline-block text-lg md:text-xl font-semibold rounded-lg px-4 py-2 md:px-6 md:py-3 cursor-pointer transition-colors duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/70";
+
+const variants = {
+  primary: "bg-brand-orange text-white shadow-md hover:bg-brand-orange-dark",
+  secondary:
+    "border-2 border-white text-white hover:bg-white hover:text-brand-orange-dark",
+};
+
+function Button({ children, href, download, variant = "primary" }) {
+  const className = `${baseStyles} ${variants[variant]}`;
+
+  if (href) {
+    return (
+      <a href={href} download={download} className={className}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button
-      className={`text-lg md:text-xl font-semibold rounded-md px-4 py-2 md:px-6 md:py-3 mt-8 cursor-pointer transition-all duration-300 ease-in-out shadow-md focus:outline-none focus:ring-4 focus:ring-[#FF6F00] focus:ring-opacity-50 bg-[#FF6F00] text-white hover:bg-[#FF9100]`}
-    >
+    <button type="button" className={className}>
       {children}
     </button>
   );
 }
-export default Button
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string,
+  download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  variant: PropTypes.oneOf(["primary", "secondary"]),
+};
+
+export default Button;

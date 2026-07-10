@@ -1,40 +1,68 @@
-## My Portfolio Website
+# Olga Minaieva — Frontend Engineer Portfolio
 
-🌐 **Live Demo:** https://olga-minaieva-personal-website.vercel.app/
+Personal portfolio for Olga Minaieva, a Toronto-based frontend engineer building responsive and accessible web applications.
 
-A modern portfolio website showcasing front-end development projects, skills, and contact information.
+**Live site:** [olga-minaieva-personal-website.vercel.app](https://olga-minaieva-personal-website.vercel.app/)
 
-<img src="/Portfolio.png" alt="Portfolio Preview" width="800">
+![Olga Minaieva portfolio preview](public/Portfolio.webp)
 
-## Features
+## Highlights
 
-- **Responsive Design**: Works on all screen sizes
-- **Project Showcase**: Interactive cards with live demos and GitHub links
-- **Smooth Animations**: Hover effects and transitions
-- **Contact Section**: Direct email and social media links
-- **Dynamic Components**: Reusable UI elements (Cards, Buttons)
-- **Scroll Management**: Auto-hiding header and scroll-to-top button
+- Responsive single-page layout for mobile, tablet, and desktop
+- Accessible landmarks, heading hierarchy, keyboard focus states, and skip navigation
+- Active-section navigation and fixed-header scroll offsets
+- Optimized WebP images with lazy loading and explicit dimensions
+- Downloadable PDF résumé and direct contact links
+- Open Graph, Twitter card, structured data, sitemap, and robots metadata
+- Reduced-motion support for visitors who prefer fewer animations
 
-## Technologies Used
+## Built With
 
-- ⚛️ React + Vite
-- 🎨 Tailwind CSS
-- 📦 React Icons
-- 🌐 HTML5 / CSS3
-- 🚀 Vercel Deployment
+- React 18
+- Vite 5
+- Tailwind CSS 3
+- React Icons
+- Vitest and React Testing Library
+- ESLint and Prettier
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
-git clone https://github.com/OlgaMinaievaWebDev/personal-portfolio.git
-2. Install dependencies:
+```bash
+git clone https://github.com/OlgaMinaievaWebDev/personal-website-new.git
+cd personal-website-new
 npm install
-3. Run the development server:
 npm run dev
+```
 
+Open the local URL printed by Vite in your browser.
+
+## Quality Checks
+
+```bash
+npm run format:check
+npm run lint
+npm run test
+npm run build
+```
+
+GitHub Actions runs the same checks for pushes and pull requests.
+
+## Project Structure
+
+```text
+src/components/   Page sections and navigation
+src/ui/           Reusable UI components
+public/           Optimized images, social metadata assets, and résumé
+```
+
+## Deployment
+
+The site is configured for deployment on Vercel. The production build is generated with:
+
+```bash
+npm run build
+```
 
 ## License
-Distributed under the MIT License. See LICENSE for more information.
 
-
-
+Distributed under the [MIT License](LICENSE).
