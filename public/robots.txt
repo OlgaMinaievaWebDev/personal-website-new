@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://olga-minaieva-personal-website.vercel.app/sitemap.xml
+Sitemap: https://olga-minaieva.vercel.app/sitemap.xml

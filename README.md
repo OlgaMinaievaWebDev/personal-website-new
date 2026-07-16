@@ -2,7 +2,7 @@
 
 Personal portfolio for Olga Minaieva, a Toronto-based frontend engineer building responsive and accessible web applications.
 
-**Live site:** [olga-minaieva-personal-website.vercel.app](https://olga-minaieva-personal-website.vercel.app/)
+**Live site:** [olga-minaieva.vercel.app](https://olga-minaieva.vercel.app/)
 
 ![Olga Minaieva portfolio preview](public/Portfolio.webp)
 

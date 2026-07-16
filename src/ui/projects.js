@@ -36,7 +36,7 @@ export const projects = [
     outcome:
       "Reached Lighthouse scores of 95 Performance and 100 for Accessibility, Best Practices, and SEO, backed by ten passing component tests.",
     technologies: ["React", "Vite", "Tailwind CSS", "Vitest"],
-    liveUrl: "https://olga-minaieva-personal-website.vercel.app/",
+    liveUrl: "https://olga-minaieva.vercel.app/",
     sourceUrl: "https://github.com/OlgaMinaievaWebDev/personal-website-new",
   },
 ];
