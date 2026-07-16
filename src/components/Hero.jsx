@@ -1,32 +1,5 @@
-import { useState, useEffect } from "react";
 import Button from "../ui/Button";
 function Hero() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Show the scroll-to-top button when the user scrolls down
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true); // Show button after scrolling down 300px
-      } else {
-        setIsVisible(false); // Hide button when near the top
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Function to scroll to the top of the page
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Smooth scrolling effect
-    });
-  };
   return (
     <section
       id="hero"
@@ -42,21 +15,18 @@ function Hero() {
         Building responsive, interactive web applications.
       </h2>
       <p className="max-w-2xl mt-5 text-lg md:text-xl font-light leading-relaxed text-white/90">
-        I create maintainable React and TypeScript applications with thoughtful
-        user experiences from Toronto, Canada.
+        Turning ideas into fast, accessible, and engaging digital experiences.
       </p>
       <ul
         className="flex flex-wrap gap-x-3 gap-y-2 mt-6 text-sm md:text-base font-semibold text-white/90"
         aria-label="Primary technologies"
       >
-        {["React", "TypeScript", "Next.js", "Tailwind CSS"].map(
-          (technology, index) => (
-            <li key={technology} className="flex items-center gap-3">
-              {index > 0 && <span aria-hidden="true">•</span>}
-              <span>{technology}</span>
-            </li>
-          ),
-        )}
+        {["React", "TypeScript", "Next.js"].map((technology, index) => (
+          <li key={technology} className="flex items-center gap-3">
+            {index > 0 && <span aria-hidden="true">•</span>}
+            <span>{technology}</span>
+          </li>
+        ))}
       </ul>
       <div className="flex flex-wrap gap-4 mt-8">
         <Button href="#work">View My Work</Button>
@@ -64,17 +34,6 @@ function Hero() {
           Contact Me
         </Button>
       </div>
-      {/* Scroll to Top Button */}
-      {isVisible && (
-        <button
-          type="button"
-          onClick={scrollToTop}
-          aria-label="Scroll to top"
-          className="fixed bottom-6 right-6 bg-hero-start text-white p-4 rounded-full shadow-lg hover:bg-hero-end transition"
-        >
-          ↑
-        </button>
-      )}
     </section>
   );
 }

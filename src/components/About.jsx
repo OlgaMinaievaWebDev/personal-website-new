@@ -4,49 +4,49 @@ function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-[72px] flex flex-col justify-center items-start w-full p-8 md:p-16 lg:p-24 bg-brand-cream text-brand-charcoal space-y-8"
+      aria-labelledby="about-heading"
+      className="scroll-mt-[72px] bg-brand-cream px-8 py-16 text-brand-charcoal md:px-16 lg:px-24"
     >
-      <div>
-        <h2 className="text-4xl text-brand-charcoal inline-block">About Me</h2>
-        <div className="h-1 w-[60px] bg-brand-orange"></div>
+      <div className="mx-auto max-w-7xl">
+        <h2 id="about-heading" className="text-4xl font-semibold">
+          About Me
+        </h2>
+        <div className="mt-2 h-1 w-[60px] bg-brand-orange" />
 
-        <div className="flex flex-col lg:flex-row items-start lg:space-x-8 space-y-8 lg:space-y-0 mt-8 gap-10">
-          <div className="w-full lg:w-1/3 flex justify-center lg:justify-start">
+        <div className="mt-8 grid items-center gap-10 lg:grid-cols-[minmax(260px,0.75fr)_1.5fr] lg:gap-16">
+          <div className="mx-auto w-full max-w-sm lg:mx-0">
             <img
               src="/IMG_4839.webp"
-              alt="Olga Minaieva, front-end developer"
+              alt="Olga Minaieva, frontend engineer"
               width="768"
-              height="1024"
+              height="960"
               loading="lazy"
               decoding="async"
-              className="w-3/4 sm:w-64 h-64 rounded-2xl shadow-xl object-cover"
+              className="aspect-[4/5] w-full rounded-2xl object-cover object-center shadow-lg"
             />
           </div>
 
-          {/* Description */}
-          <div className="lg:w-2/3 text-center lg:text-left">
-            <p className="text-xl leading-relaxed mb-6">
-              I&apos;m a frontend engineer based in Toronto, Canada, focused on
-              building responsive, interactive web applications with React,
-              TypeScript, Next.js, and Tailwind CSS. I enjoy turning complex
-              requirements into accessible interfaces, reusable components, and
-              maintainable application architecture.
+          <div className="max-w-3xl">
+            <p className="text-xl font-medium leading-relaxed md:text-2xl">
+              I&apos;m a Toronto-based frontend engineer who enjoys turning
+              complex ideas into clear, accessible digital experiences.
             </p>
-            <p className="text-xl leading-relaxed mb-6">
-              My experience includes API integration, authentication,
-              server-side rendering, and collaborative delivery through pull
-              requests and code reviews. A customer-service background has
-              strengthened my communication, ownership, and problem-solving
-              skills—qualities I bring to both the product and the team behind
-              it.
+            <p className="mt-5 text-base leading-relaxed text-gray-600 md:text-lg">
+              My recent work includes leading a three-person team on an OpenAPI
+              playground, building authentication and API integrations, and
+              creating reusable interfaces with React, Next.js, and TypeScript.
+              I bring a collaborative mindset, strong communication, and care
+              for the details that make products easier to use.
             </p>
 
-            <Button
-              href="/Olga_Minaieva_Frontend_CV.pdf"
-              download="Olga_Minaieva_Frontend_CV.pdf"
-            >
-              Download CV
-            </Button>
+            <div className="mt-7">
+              <Button
+                href="/Olga_Minaieva_Frontend_CV.pdf"
+                download="Olga_Minaieva_Frontend_CV.pdf"
+              >
+                Download CV
+              </Button>
+            </div>
           </div>
         </div>
       </div>

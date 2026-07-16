@@ -2,6 +2,8 @@ import "@testing-library/jest-dom/vitest";
 import { afterEach, beforeEach, vi } from "vitest";
 import { cleanup } from "@testing-library/react";
 
+globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+
 class IntersectionObserverMock {
   constructor(callback) {
     this.callback = callback;
