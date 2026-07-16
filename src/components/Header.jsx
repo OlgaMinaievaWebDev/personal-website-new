@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const navigationItems = [
-  { label: "Work", href: "#work", sectionId: "work" },
   { label: "About", href: "#about", sectionId: "about" },
+  { label: "Skills", href: "#skills", sectionId: "skills" },
+  { label: "Work", href: "#work", sectionId: "work" },
   { label: "Contact", href: "#contact", sectionId: "contact" },
 ];
 
 function Header() {
   const [activeSection, setActiveSection] = useState("hero");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const sections = ["hero", "about", "work", "contact"]
+    const sections = ["hero", "about", "skills", "work", "contact"]
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
@@ -64,7 +67,7 @@ function Header() {
               className="w-11 h-11 rounded-lg"
             />
           </a>
-          <div className="flex items-center gap-1 sm:gap-2 md:gap-6 text-sm sm:text-base md:text-lg font-semibold">
+          <div className="hidden items-center gap-2 text-base font-semibold sm:flex md:gap-6 md:text-lg">
             {navigationItems.map(({ label, href, sectionId }) => {
               const isActive = activeSection === sectionId;
 
@@ -84,7 +87,53 @@ function Header() {
               );
             })}
           </div>
+          <button
+            type="button"
+            aria-label={
+              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMenuOpen((isOpen) => !isOpen)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md text-xl text-brand-charcoal transition-colors hover:bg-brand-peach focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange sm:hidden"
+          >
+            {isMenuOpen ? (
+              <FaTimes aria-hidden="true" focusable="false" />
+            ) : (
+              <FaBars aria-hidden="true" focusable="false" />
+            )}
+          </button>
         </nav>
+        {isMenuOpen && (
+          <nav
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+            className="border-t border-brand-peach bg-brand-cream px-4 py-3 shadow-lg sm:hidden"
+          >
+            <ul className="space-y-1">
+              {navigationItems.map(({ label, href, sectionId }) => {
+                const isActive = activeSection === sectionId;
+
+                return (
+                  <li key={sectionId}>
+                    <a
+                      href={href}
+                      aria-current={isActive ? "location" : undefined}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`flex min-h-11 items-center rounded-md px-3 font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange ${
+                        isActive
+                          ? "bg-brand-orange text-white"
+                          : "text-brand-charcoal hover:bg-brand-peach hover:text-brand-orange-dark"
+                      }`}
+                    >
+                      {label}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        )}
       </header>
     </>
   );

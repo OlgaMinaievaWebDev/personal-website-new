@@ -11,6 +11,7 @@ function renderPageWithHeader() {
       <main id="main-content">
         <section id="hero">Hero</section>
         <section id="about">About section</section>
+        <section id="skills">Skills section</section>
         <section id="work">Work section</section>
         <section id="contact">Contact section</section>
       </main>
@@ -63,19 +64,27 @@ describe("Header", () => {
     const user = userEvent.setup();
     renderPageWithHeader();
 
+    await user.click(
+      screen.getByRole("button", { name: "Open navigation menu" }),
+    );
+
     const links = [
-      ["Work", "#work"],
       ["About", "#about"],
+      ["Skills", "#skills"],
+      ["Work", "#work"],
       ["Contact", "#contact"],
     ];
 
     for (const [name, href] of links) {
-      const link = screen.getByRole("link", { name });
+      const link = screen.getAllByRole("link", { name }).at(-1);
       expect(link).toHaveClass("min-h-11");
       expect(link).toHaveAttribute("href", href);
     }
 
-    await user.click(screen.getByRole("link", { name: "Contact" }));
+    await user.click(screen.getAllByRole("link", { name: "Contact" }).at(-1));
     expect(window.location.hash).toBe("#contact");
+    expect(
+      screen.queryByRole("navigation", { name: "Mobile navigation" }),
+    ).not.toBeInTheDocument();
   });
 });
