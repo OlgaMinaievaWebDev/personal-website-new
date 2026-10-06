@@ -1,7 +1,27 @@
 import portfolioImage from "/Portfolio.webp";
 import openApiPlaygroundImage from "/OpenAPIPlayground.webp";
+import coffeeHouseImage from "/CoffeeHouse.jpg";
 
 export const projects = [
+  {
+    id: "coffee-house",
+    title: "Coffee House",
+    role: "RS School · Frontend project",
+    image: coffeeHouseImage,
+    problem:
+      "Turn a cafe design into a responsive website where visitors can explore drinks and customize their selections.",
+    solution:
+      "A two-page site built with HTML, CSS, and vanilla JavaScript, featuring a coffee carousel, filterable menu, product modals, and light and dark themes.",
+    contributions: [
+      "Built responsive layouts and mobile navigation with animated controls and Escape-key support.",
+      "Rendered menu cards from JSON and implemented product customization with instant price updates.",
+    ],
+    outcome:
+      "Deployed an interactive cafe website with category filtering, mobile Show More controls, and configurable drink sizes and extras.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveUrl: "https://majestic-cobbler-72ebd1.netlify.app/",
+    sourceUrl: "https://github.com/OlgaMinaievaWebDev/rsschool-landing-page",
+  },
   {
     id: "openapi-playground",
     title: "OpenAPI Playground",
